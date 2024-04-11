@@ -15,14 +15,14 @@
 1. Push & Pull
     -von jmd das geteilte Repository in VS öffnen: File -> New Window -> Clone Repository from GitHub -> link von Github in Suchleiste kopieren
     -Veränderungen von anderen am Repository auf VS sehen: links Source&Control -> ... -> pull
-    -geändertes wieder für den anderen comitten: Source&Control -> Änderungen sollten angezeigt werden -> Message eintippen -> und Dateien comitten
+    -geändertes wieder für den anderen comitten: Source&Control -> Änderungen mit Haken anzeigen lassen -> Message eintippen -> und Dateien comitten
 
-2. VENV erstellen:
+2. VENV erstellen: ?
     - Virtuelle Umgebung aktivieren, um sicherzustellen, dass die Bedingungen in der Zukunft die selben sind wie aktuell und der Code funktioniert (z.B.: dass sich numpy nicht updated und wir somit unnötige Fehler vermeiden)
     - Virtuelle Umgebung aktivieren mittels /venv
     - in Kommandozeile: <Umgebungsname>\Scripts\activate
     - falls Probleme auftreten: Set-ExecutionPolicy -ExecutionPolicy Unrestricted (hat Sicherheitsgründe)
 
-3. Venv Ordner in Gitignore: 
-    -Speichern Sie Ihre .gitignore-Datei: Speichern Sie die .gitignore-Datei nachdem Sie den Eintrag für den venv-Ordner hinzugefügt haben.
-    -Aktualisieren Sie Ihr Repository: Führen Sie git add .gitignore und git commit -m "Add venv to .gitignore" aus, um Ihre Änderungen an der .gitignore-Datei zu committen. Danach können Sie Ihr Repository normal pushen
+3. Venv Ordner in Gitignore: ?
+    -Speichern .gitignore-Datei: Speichern Sie die .gitignore-Datei nachdem Sie den Eintrag für den venv-Ordner hinzugefügt haben.
+    -Aktualisieren Sie Ihr Repository: Führen Sie git add .gitignore und git commit -m "Add venv to .gitignore" aus, um Ihre Änderungen an der .gitignore-Datei zu committen (in der Bash Zeile beim Terminal). Danach können Sie Ihr Repository normal pushen
