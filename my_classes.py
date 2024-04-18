@@ -9,15 +9,6 @@ class Person:
         self.age = age
         self.phone_number = phone_number
 
-    def estimate_max_hr(self):
-        if self.sex == "male":
-            max_hr_bpm =  223 - 0.9 * self.age
-        elif self.sex == "female":
-            max_hr_bpm = 226 - 1.0 * self.age
-        else:
-            max_hr_bpm = input("Enter maximum heart rate:")
-        return int(max_hr_bpm)
-
     def to_dict(self):
         return {
             "first_name": self.first_name,
