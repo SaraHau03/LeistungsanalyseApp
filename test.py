@@ -1,34 +1,26 @@
-import json
-from my_classes import Person, Experiment
+from my_classes import Subject, Supervisor, Experiment
 
 def main():
-    # Testdaten
+    # Erstellung eines Beispiel-Experiment-Objekts
     experiment_name = "Herzfrequenzmessung"
-    experiment_number = 123456
-    date = "28-02-2024"
-    supervisor = "Hau"
-    subject_first_name = "Noah"
-    subject_last_name = "Mueller"
-    sex = "male"
-    age = 20
-    phone_number = "621811420"
+    experiment_number = 123
+    date = "05-06-2023"
+    supervisor_id = "123456"
+    subject_first_name = "Sara"
+    subject_last_name = "Hau"
+    subject_birth_date = "28-03-2003"
+    subject_sex = "female"
 
-    # Geschätzte maximale Herzfrequenz
-    subject = Person(subject_first_name, subject_last_name, sex, age, phone_number)
-    max_hr = subject.estimate_max_hr()
-
-    # Experiment-Objekt
+    # Erstellung der Objekte
+    supervisor = Supervisor(supervisor_id)
+    subject = Subject(subject_first_name, subject_last_name, subject_birth_date, subject_sex)
     experiment = Experiment(experiment_name, experiment_number, date, supervisor, subject)
 
-    # Ausgabe des Experiment-Dictionary
-    print("Experiment- und Versuchsteilnehmerdaten:")
-    print(experiment.to_dict())
-
-    # Speichern des Experiment-Objekts in einer JSON-Datei
+    # Speichern in test_experiment_data.json
     filename = "test_experiment_data.json"
     experiment.save(filename)
 
-    print(f"Die Testdaten wurden in der Datei '{filename}' gespeichert.")
+    print(f"Die Experimentdaten wurden in der Datei '{filename}' gespeichert.")
 
 if __name__ == "__main__":
     main()

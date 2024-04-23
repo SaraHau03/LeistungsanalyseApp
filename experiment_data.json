@@ -1,1 +1,1 @@
-{"experiment_name": "HErzfrequenzmessung", "experiment_number": 123456, "date": "28-03-2021", "supervisor": "Hau", "subject": {"first_name": "Noah", "last_name": "Mueller", "sex": "male", "age": 19, "phone_number": 621273884}}
+{"experiment_name": "Herzfrequenzmessung", "experiment_number": 12345, "date": "06-05-2023", "supervisor": {"id_number": "123456"}, "subject": {"first_name": "Sara", "last_name": "Hau", "age": 21, "sex": "female", "max_hr": 205}}

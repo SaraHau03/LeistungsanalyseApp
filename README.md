@@ -38,3 +38,7 @@
 3. Venv Ordner in Gitignore: 
     -Speichern .gitignore-Datei: Speichern Sie die .gitignore-Datei nachdem Sie den Eintrag für den venv-Ordner hinzugefügt haben.
     -Aktualisieren Sie Ihr Repository: Führen Sie git add .gitignore und git commit -m "Add venv to .gitignore" aus, um Ihre Änderungen an der .gitignore-Datei zu committen (in der Bash Zeile beim Terminal). Danach können Sie Ihr Repository normal pushen
+
+Sidenotes:
+- Eingabe um den Code in der neuen Branch zu speichern
+``git checkout Sara``

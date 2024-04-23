@@ -1,31 +1,28 @@
-import json
-from my_functions import estimate_max_hr
-from my_classes import Person, Experiment
+from my_classes import Subject, Supervisor, Experiment
 
 def main():
-    # Eingabe
     experiment_name = input("Art des Experiments: ")
     experiment_number = int(input("Nummer des Experiments: "))
     date = input("Datum des Experiments (DD-MM-YYYY): ")
-    supervisor = input("Nachname des Supervisors: ")
+
+    #Supervisor:
+    supervisor_id = input("ID-Nummer des Supervisors: ")
+    supervisor = Supervisor(supervisor_id)
+
+    #Subject:
     subject_first_name = input("Vorname des Versuchsteilnehmers: ")
     subject_last_name = input("Nachname des Versuchsteilnehmers: ")
-    sex = input("Geschlecht des Versuchsteilnehmers (male/female): ")
-    age = int(input("Alter des Versuchsteilnehmers: "))
-    phone_number = int(input("Telefonnummer des Versuchsteilnehmer: "))
+    subject_birth_date = input("Geburtsdatum des Versuchsteilnehmers (DD-MM-YYYY): ")
+    subject_sex = input("Geschlecht des Versuchsteilnehmers (male/female): ")
+    subject = Subject(subject_first_name, subject_last_name, subject_birth_date, subject_sex)
 
-    # Geschätzte maximale Herzfrequenz
-    subject = Person(subject_first_name, subject_last_name, sex, age, phone_number)
-    max_hr = subject.estimate_max_hr()
-
-    # Experiment-Objekt
+    #Experiment:
     experiment = Experiment(experiment_name, experiment_number, date, supervisor, subject)
 
-    # Ausgabe des Experiment-Dictionary
     print("Experiment- und Versuchsteilnehmerdaten:")
     print(experiment.to_dict())
 
-    # Speichern des Experiment-Objekts in einer JSON-Datei
+    #Speichern in experiment_data.json:
     filename = "experiment_data.json"
     experiment.save(filename)
 
